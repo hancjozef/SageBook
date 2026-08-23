@@ -21,14 +21,12 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/vendor/katex.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/vendor/prism.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/notebook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/nbpreview.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/css/nbplayer18.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/css/nbplayer21.css">
 <link rel="stylesheet" href="custom.css">
 </head>
 <body>
@@ -36,164 +34,30 @@
 <div id="main">
 <div id="notebook-holder"><div class="nb-notebook"><div class="nb-worksheet"><div class="nb-cell nb-markdown-cell">
         <div class="editor-container">
-            <textarea id="md-editor-1781246062129" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="**author:** D. Borovský, J. Hanč, UPJŠ
+            <textarea id="md-editor-1787508317888-1" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="**autori:** D. Borovský, J. Hanč, UPJŠ
 ##### Ťaháky a príkazy
 - [Analýza](https://drive.google.com/file/d/1j3UV-MOOJNM_6CNXBJLTaB8dXMsVEdZx/preview), [Algebra](https://drive.google.com/file/d/1mPK3hbp1ZdHqapRiRwj3JQftBDbaWn03/preview)
 - [Jupyter](https://docs.google.com/document/d/1SfarPTitlITzPuQSM6Ocs31RNKcU4ZLzCpgfcjvuQ0k/preview), [Markdown](https://drive.google.com/file/d/18iqgfQILf7h7LeRy4cxssYUMaSs2kmXy/preview)
-- Geogebra (www.geogebra.org/classic) 
-
-| Pojem | Zápis / príkaz | Príklad |
-|------|----------------|---------|
-| **Imaginárna jednotka** | `I` alebo `i` | `i^2 = -1` |
-| **Komplexné číslo** | `a + b*i` alebo `r*e^(i*t)` | `z = 5 + 2*i` $\quad$  `u=3*e^(-pi/4*i))` |
-| **Reálna časť** | `z.real()` alebo `Re(z)` | `Re(z)`$=5$  $\quad$  `Re(u)`$=\frac{3\sqrt{2}}{2}$ |
-| **Imaginárna časť** | `z.imag()` alebo `Im(z)` | `Im(z)`$=2$ $\quad$  `Im(u)`$=-\frac{3\sqrt{2}}{2}$ |
-| **Modul - absolútna hodnota** | `abs(z)` alebo `Abs(z)` | `Abs(z)`$=\sqrt{29}$ $\quad$ `Abs(u)`$=3$ |  
-| **Fáza  - argument** | `arg(z)` alebo `Arg(z)` | `Arg(z)`$=\arctan(2/5)$ $\quad$ `Arg(u)`$=-\pi/4$|
-| **Komplexne združené** | `z.conjugate()` | `z.conjugate()`$=5+2i$  |
-| **Algebraický tvar** | `algebra_form(u)` | `algebra_form(u)`$=\frac{3\sqrt{2}}{2} i + \frac{3\sqrt{2}}{2}$
-|
-| **Eulerov tvar (symbolicky)** | `euler_form(z)` |  `euler_form(z)`$=\sqrt{29} e^{\left(i \, \arctan\left(\frac{2}{5}\right)\right)}$
-|
-| **Eulerov tvar (numericky)** | `euler_form(z, True)` | $z=5.385164807134504\, e^{0.3805063771123649i}$ |
-
-$\phantom{x}$" style="display: none;">**author:** D. Borovský, J. Hanč, UPJŠ
-##### Ťaháky a príkazy
-- [Analýza](https://drive.google.com/file/d/1j3UV-MOOJNM_6CNXBJLTaB8dXMsVEdZx/preview), [Algebra](https://drive.google.com/file/d/1mPK3hbp1ZdHqapRiRwj3JQftBDbaWn03/preview)
-- [Jupyter](https://docs.google.com/document/d/1SfarPTitlITzPuQSM6Ocs31RNKcU4ZLzCpgfcjvuQ0k/preview), [Markdown](https://drive.google.com/file/d/18iqgfQILf7h7LeRy4cxssYUMaSs2kmXy/preview)
-- Geogebra (www.geogebra.org/classic) 
-
-| Pojem | Zápis / príkaz | Príklad |
-|------|----------------|---------|
-| **Imaginárna jednotka** | `I` alebo `i` | `i^2 = -1` |
-| **Komplexné číslo** | `a + b*i` alebo `r*e^(i*t)` | `z = 5 + 2*i` $\quad$  `u=3*e^(-pi/4*i))` |
-| **Reálna časť** | `z.real()` alebo `Re(z)` | `Re(z)`$=5$  $\quad$  `Re(u)`$=\frac{3\sqrt{2}}{2}$ |
-| **Imaginárna časť** | `z.imag()` alebo `Im(z)` | `Im(z)`$=2$ $\quad$  `Im(u)`$=-\frac{3\sqrt{2}}{2}$ |
-| **Modul - absolútna hodnota** | `abs(z)` alebo `Abs(z)` | `Abs(z)`$=\sqrt{29}$ $\quad$ `Abs(u)`$=3$ |  
-| **Fáza  - argument** | `arg(z)` alebo `Arg(z)` | `Arg(z)`$=\arctan(2/5)$ $\quad$ `Arg(u)`$=-\pi/4$|
-| **Komplexne združené** | `z.conjugate()` | `z.conjugate()`$=5+2i$  |
-| **Algebraický tvar** | `algebra_form(u)` | `algebra_form(u)`$=\frac{3\sqrt{2}}{2} i + \frac{3\sqrt{2}}{2}$
-|
-| **Eulerov tvar (symbolicky)** | `euler_form(z)` |  `euler_form(z)`$=\sqrt{29} e^{\left(i \, \arctan\left(\frac{2}{5}\right)\right)}$
-|
-| **Eulerov tvar (numericky)** | `euler_form(z, True)` | $z=5.385164807134504\, e^{0.3805063771123649i}$ |
-
-$\phantom{x}$</textarea>
+- Geogebra (www.geogebra.org/classic) " style="display: none;"></textarea>
         </div>
-        <div id="preview-1781246062129" class="markdown-preview" style="display: block;" data-original-markdown="**author:** D. Borovský, J. Hanč, UPJŠ
+        <div id="preview-1787508317888-1" class="markdown-preview" style="display: block;" data-original-markdown="**autori:** D. Borovský, J. Hanč, UPJŠ
 ##### Ťaháky a príkazy
 - [Analýza](https://drive.google.com/file/d/1j3UV-MOOJNM_6CNXBJLTaB8dXMsVEdZx/preview), [Algebra](https://drive.google.com/file/d/1mPK3hbp1ZdHqapRiRwj3JQftBDbaWn03/preview)
 - [Jupyter](https://docs.google.com/document/d/1SfarPTitlITzPuQSM6Ocs31RNKcU4ZLzCpgfcjvuQ0k/preview), [Markdown](https://drive.google.com/file/d/18iqgfQILf7h7LeRy4cxssYUMaSs2kmXy/preview)
-- Geogebra (www.geogebra.org/classic) 
-
-| Pojem | Zápis / príkaz | Príklad |
-|------|----------------|---------|
-| **Imaginárna jednotka** | `I` alebo `i` | `i^2 = -1` |
-| **Komplexné číslo** | `a + b*i` alebo `r*e^(i*t)` | `z = 5 + 2*i` $\quad$  `u=3*e^(-pi/4*i))` |
-| **Reálna časť** | `z.real()` alebo `Re(z)` | `Re(z)`$=5$  $\quad$  `Re(u)`$=\frac{3\sqrt{2}}{2}$ |
-| **Imaginárna časť** | `z.imag()` alebo `Im(z)` | `Im(z)`$=2$ $\quad$  `Im(u)`$=-\frac{3\sqrt{2}}{2}$ |
-| **Modul - absolútna hodnota** | `abs(z)` alebo `Abs(z)` | `Abs(z)`$=\sqrt{29}$ $\quad$ `Abs(u)`$=3$ |  
-| **Fáza  - argument** | `arg(z)` alebo `Arg(z)` | `Arg(z)`$=\arctan(2/5)$ $\quad$ `Arg(u)`$=-\pi/4$|
-| **Komplexne združené** | `z.conjugate()` | `z.conjugate()`$=5+2i$  |
-| **Algebraický tvar** | `algebra_form(u)` | `algebra_form(u)`$=\frac{3\sqrt{2}}{2} i + \frac{3\sqrt{2}}{2}$
-|
-| **Eulerov tvar (symbolicky)** | `euler_form(z)` |  `euler_form(z)`$=\sqrt{29} e^{\left(i \, \arctan\left(\frac{2}{5}\right)\right)}$
-|
-| **Eulerov tvar (numericky)** | `euler_form(z, True)` | $z=5.385164807134504\, e^{0.3805063771123649i}$ |
-
-$\phantom{x}$"><p><strong>author:</strong> D. Borovský, J. Hanč, UPJŠ</p>
+- Geogebra (www.geogebra.org/classic) "><p><strong>autori:</strong> D. Borovský, J. Hanč, UPJŠ</p>
 <h5 id="ťaháky-a-príkazy">Ťaháky a príkazy</h5>
 <ul>
 <li><a href="https://drive.google.com/file/d/1j3UV-MOOJNM_6CNXBJLTaB8dXMsVEdZx/preview">Analýza</a>, <a href="https://drive.google.com/file/d/1mPK3hbp1ZdHqapRiRwj3JQftBDbaWn03/preview">Algebra</a></li>
 <li><a href="https://docs.google.com/document/d/1SfarPTitlITzPuQSM6Ocs31RNKcU4ZLzCpgfcjvuQ0k/preview">Jupyter</a>, <a href="https://drive.google.com/file/d/18iqgfQILf7h7LeRy4cxssYUMaSs2kmXy/preview">Markdown</a></li>
 <li>Geogebra (<a href="http://www.geogebra.org/classic">www.geogebra.org/classic</a>)</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Pojem</th>
-<th>Zápis / príkaz</th>
-<th>Príklad</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Imaginárna jednotka</strong></td>
-<td><code>I</code> alebo <code>i</code></td>
-<td><code>i^2 = -1</code></td>
-</tr>
-<tr>
-<td><strong>Komplexné číslo</strong></td>
-<td><code>a + b*i</code> alebo <code>r*e^(i*t)</code></td>
-<td><code>z = 5 + 2*i</code> $\quad$  <code>u=3*e^(-pi/4*i))</code></td>
-</tr>
-<tr>
-<td><strong>Reálna časť</strong></td>
-<td><code>z.real()</code> alebo <code>Re(z)</code></td>
-<td><code>Re(z)</code>$=5$  $\quad$  <code>Re(u)</code>$=\frac{3\sqrt{2}}{2}$</td>
-</tr>
-<tr>
-<td><strong>Imaginárna časť</strong></td>
-<td><code>z.imag()</code> alebo <code>Im(z)</code></td>
-<td><code>Im(z)</code>$=2$ $\quad$  <code>Im(u)</code>$=-\frac{3\sqrt{2}}{2}$</td>
-</tr>
-<tr>
-<td><strong>Modul - absolútna hodnota</strong></td>
-<td><code>abs(z)</code> alebo <code>Abs(z)</code></td>
-<td><code>Abs(z)</code>$=\sqrt{29}$ $\quad$ <code>Abs(u)</code>$=3$</td>
-</tr>
-<tr>
-<td><strong>Fáza  - argument</strong></td>
-<td><code>arg(z)</code> alebo <code>Arg(z)</code></td>
-<td><code>Arg(z)</code>$=\arctan(2/5)$ $\quad$ <code>Arg(u)</code>$=-\pi/4$</td>
-</tr>
-<tr>
-<td><strong>Komplexne združené</strong></td>
-<td><code>z.conjugate()</code></td>
-<td><code>z.conjugate()</code>$=5+2i$</td>
-</tr>
-<tr>
-<td><strong>Algebraický tvar</strong></td>
-<td><code>algebra_form(u)</code></td>
-<td><code>algebra_form(u)</code>$=\frac{3\sqrt{2}}{2} i + \frac{3\sqrt{2}}{2}$</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Eulerov tvar (symbolicky)</strong></td>
-<td><code>euler_form(z)</code></td>
-<td><code>euler_form(z)</code>$=\sqrt{29} e^{\left(i \, \arctan\left(\frac{2}{5}\right)\right)}$</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Eulerov tvar (numericky)</strong></td>
-<td><code>euler_form(z, True)</code></td>
-<td>$z=5.385164807134504\, e^{0.3805063771123649i}$</td>
-</tr>
-</tbody></table>
-<p>$\phantom{x}$</p>
 </div>
-    </div><div class="nb-cell nb-code-cell"><div class="compute sagecell output_47a3b757371c4ea5820922534947be36" style="display: none;">
-
-
-<div class="sagecell_output_elements" style="display: none;">
-    
-    
-</div></div>
-  <div class="compute" style="display: none;">
-    <script type="text/x-sage"># PRELOAD
+    </div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># Načítanie dodatočných knižníc pre algebru a analýzu
 url = 'https://raw.githubusercontent.com/JupyterPER/SageApps/main/Algebra_package.sage'
 load(url)
 url = 'https://raw.githubusercontent.com/JupyterPER/SageApps/main/Show_package.sage'
 load(url)
-</script>
-  </div></div></div></div></div>
+</script></div></div></div></div></div>
             
         </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -214,10 +78,10 @@ load(url)
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.css">
 <script>let RUN_DELAY = 1000;</script>
 <script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/customthemes15.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbrunner18.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbaiengine17.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbrunner21.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbaiengine21.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbaipriming13.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbautocompletion15.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbautocompletion20.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://code.datagridxl.com/datagridxl2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fflate@0.8.3/umd/index.min.js"></script>
@@ -231,7 +95,8 @@ load(url)
   let SAGECELL_URL="https://sagecell.sagemath.org/";
   let toggleEvalBtnsState=false;
   let isFullWidthState=false;
-  let PRELOAD="# PRELOAD\nurl = 'https://raw.githubusercontent.com/JupyterPER/SageApps/main/Algebra_package.sage'\nload(url)\nurl = 'https://raw.githubusercontent.com/JupyterPER/SageApps/main/Show_package.sage'\nload(url)";
+  window.hideCodeInputState=false;
+  let PRELOAD="";
   let SETTINGS_PATH_NAME="settings.js";
   makeMenu();
   localize();
