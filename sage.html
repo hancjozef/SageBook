@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;polygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='%234CAF50'/&gt;&lt;text x='50' y='68' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='%23fff' text-anchor='middle'&gt;S&lt;/text&gt;&lt;/svg&gt;">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/es5-shim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/ansi_up.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/katex-auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/vendor/notebook.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/vendor/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/vendor/prism.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/notebook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/css/nbpreview.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/css/nbplayer21.css">
+<link rel="stylesheet" href="custom.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
+<div id="main">
+<div id="notebook-holder"><div class="nb-notebook"><div class="nb-worksheet"><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623971-2" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="**Základné fyzikálne praktikum I**, Jozef Hanč, PF UPJŠ v Košiciach  
+***
+
+# &lt;font color='545AA7'&gt; Zákon šírenia neistôt a ich rozpočet: &lt;br&gt; Papier vs. Sage&lt;/font&gt;" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623971-2" class="markdown-preview" style="display: block;" data-original-markdown="**Základné fyzikálne praktikum I**, Jozef Hanč, PF UPJŠ v Košiciach  
+***
+
+# &lt;font color='545AA7'&gt; Zákon šírenia neistôt a ich rozpočet: &lt;br&gt; Papier vs. Sage&lt;/font&gt;"><p><strong>Základné fyzikálne praktikum I</strong>, Jozef Hanč, PF UPJŠ v Košiciach  </p>
+<hr>
+<h1 id="-zákon-šírenia-neistôt-a-ich-rozpočet--papier-vs-sage"><font color="545AA7"> Zákon šírenia neistôt a ich rozpočet: <br> Papier vs. Sage</font></h1>
+</div>
+    </div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623971-3" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="## Zbierka - Úloha 36
+Digitálnymi váhami sme zmerali hmotnosť mobilu: $m = (83.360\pm 0.003\,) \text{g}$. O gravitačnom zrýchlení v Košiciach vieme, že $g = (9.810 \pm 0.002 \,) \text{m.s}^{-2}$. Podarilo sa nám zmerať uhol naklonenej dosky digitálnym uhlomerom: $α = (20.00±0.06)°$.  
+
+*Ak položíme na dosku mobil, čo môžeme povedať o veľkosti sily dosky na mobil a jej neistote?*  
+*Aký záver vieme povedať o meraní?*
+
+Úlohu vyriešte na papieri a súčasne jednotlivé kroky realizujte v Sagi. Úlohu vyriešte tiež pomocou knižnice MetroloPy." style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623971-3" class="markdown-preview" style="display: block;" data-original-markdown="## Zbierka - Úloha 36
+Digitálnymi váhami sme zmerali hmotnosť mobilu: $m = (83.360\pm 0.003\,) \text{g}$. O gravitačnom zrýchlení v Košiciach vieme, že $g = (9.810 \pm 0.002 \,) \text{m.s}^{-2}$. Podarilo sa nám zmerať uhol naklonenej dosky digitálnym uhlomerom: $α = (20.00±0.06)°$.  
+
+*Ak položíme na dosku mobil, čo môžeme povedať o veľkosti sily dosky na mobil a jej neistote?*  
+*Aký záver vieme povedať o meraní?*
+
+Úlohu vyriešte na papieri a súčasne jednotlivé kroky realizujte v Sagi. Úlohu vyriešte tiež pomocou knižnice MetroloPy."><h2 id="zbierka---úloha-36">Zbierka - Úloha 36</h2>
+<p>Digitálnymi váhami sme zmerali hmotnosť mobilu: $m = (83.360\pm 0.003\,) \text{g}$. O gravitačnom zrýchlení v Košiciach vieme, že $g = (9.810 \pm 0.002 \,) \text{m.s}^{-2}$. Podarilo sa nám zmerať uhol naklonenej dosky digitálnym uhlomerom: $α = (20.00±0.06)°$.  </p>
+<p><em>Ak položíme na dosku mobil, čo môžeme povedať o veľkosti sily dosky na mobil a jej neistote?</em><br><em>Aký záver vieme povedať o meraní?</em></p>
+<p>Úlohu vyriešte na papieri a súčasne jednotlivé kroky realizujte v Sagi. Úlohu vyriešte tiež pomocou knižnice MetroloPy.</p>
+</div>
+    </div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623971-4" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="&gt;*Pozn.* Na riešení tejto úlohy si dodatočne vysvetlíme základné pojmy aj princípy ako sa vypočítava neistota nepriamej veličiny, 
+t.j. vypočítavanej veličiny, ktorá je daná matematickýcm vzťahom závisiacim od priamych veličín, ktoré sú merané
+meracími prístrojmi." style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623971-4" class="markdown-preview" style="display: block;" data-original-markdown="&gt;*Pozn.* Na riešení tejto úlohy si dodatočne vysvetlíme základné pojmy aj princípy ako sa vypočítava neistota nepriamej veličiny, 
+t.j. vypočítavanej veličiny, ktorá je daná matematickýcm vzťahom závisiacim od priamych veličín, ktoré sú merané
+meracími prístrojmi."><blockquote>
+<p><em>Pozn.</em> Na riešení tejto úlohy si dodatočne vysvetlíme základné pojmy aj princípy ako sa vypočítava neistota nepriamej veličiny, 
+t.j. vypočítavanej veličiny, ktorá je daná matematickýcm vzťahom závisiacim od priamych veličín, ktoré sú merané
+meracími prístrojmi.</p>
+</blockquote>
+</div>
+    </div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623971-5" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="# Riešenie v Sagi, resp. na papieri
+
+Riešenie v Sagi presne kopíruje riešenie na papieri. 
+
+Spočíva v troch krokoch
+- *zadáme veličiny a ich hodnoty*
+    - priamo merané veličiny ako symbolické premenné
+    - nepriamo meraná veličina ako symbolický výraz
+    - namerané hodnoty do pamätí
+- *vypočítame všeobecný tvar neistoty nepriamo meranej veličiny*
+    - aplikujeme zákon šírenia neistôt
+- *dosadíme konkrétne namerané hodnoty*
+    - vypočítame odhad nepriamej veličiny
+    - vypočítame neistotu nepriamej veličiny
+    - vypočítame percentuálny podiel na neistote od priamych veličín" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623971-5" class="markdown-preview" style="display: block;" data-original-markdown="# Riešenie v Sagi, resp. na papieri
+
+Riešenie v Sagi presne kopíruje riešenie na papieri. 
+
+Spočíva v troch krokoch
+- *zadáme veličiny a ich hodnoty*
+    - priamo merané veličiny ako symbolické premenné
+    - nepriamo meraná veličina ako symbolický výraz
+    - namerané hodnoty do pamätí
+- *vypočítame všeobecný tvar neistoty nepriamo meranej veličiny*
+    - aplikujeme zákon šírenia neistôt
+- *dosadíme konkrétne namerané hodnoty*
+    - vypočítame odhad nepriamej veličiny
+    - vypočítame neistotu nepriamej veličiny
+    - vypočítame percentuálny podiel na neistote od priamych veličín"><h1 id="riešenie-v-sagi-resp-na-papieri">Riešenie v Sagi, resp. na papieri</h1>
+<p>Riešenie v Sagi presne kopíruje riešenie na papieri. </p>
+<p>Spočíva v troch krokoch</p>
+<ul>
+<li><em>zadáme veličiny a ich hodnoty</em><ul>
+<li>priamo merané veličiny ako symbolické premenné</li>
+<li>nepriamo meraná veličina ako symbolický výraz</li>
+<li>namerané hodnoty do pamätí</li>
+</ul>
+</li>
+<li><em>vypočítame všeobecný tvar neistoty nepriamo meranej veličiny</em><ul>
+<li>aplikujeme zákon šírenia neistôt</li>
+</ul>
+</li>
+<li><em>dosadíme konkrétne namerané hodnoty</em><ul>
+<li>vypočítame odhad nepriamej veličiny</li>
+<li>vypočítame neistotu nepriamej veličiny</li>
+<li>vypočítame percentuálny podiel na neistote od priamych veličín</li>
+</ul>
+</li>
+</ul>
+</div>
+    </div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># nacitanie nasho pomocneho balika
+url = 'https://raw.githubusercontent.com/JupyterPER/SageMathApplications/main/labreport.sage' 
+load(url)
+</script></div></div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623973-6" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="### A. Zadanie veličín (Zápis)" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623973-6" class="markdown-preview" style="display: block;" data-original-markdown="### A. Zadanie veličín (Zápis)"><h3 id="a-zadanie-veličín-zápis">A. Zadanie veličín (Zápis)</h3>
+</div>
+    </div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># priamo merané - symbolicke premenne
+m, g, a = var('m, g, alpha')
+um, ug, ua = var('u_m, u_g, u_alpha')
+
+# zoznam velicin a ich neistot
+vel = [(m,um), (g,ug), (a,ua)]
+show(vel)
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># nepriamo merana velicina - symb. vyraz
+F = m*g*cos(a)
+show(F)
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># konkretne hodnoty velicin (v SI sustave)
+mh, umh = S83.360e-3, 0.003e-3   # kg
+gh, ugh = 9.810, 0.002          # m*s^(-2)    
+
+# prevod uhla na radiany
+k = pi.n()/180
+ah, uah = 20.0*k, 0.06*k        # rad 
+ah, uah
+</script></div></div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623974-7" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="&gt;Hodnoty veličín ukladáme do osobitných pamätí s koncovkou `h` (hodnota),  
+aby sme nezrušili veličiny ako symbolické premenné" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623974-7" class="markdown-preview" style="display: block;" data-original-markdown="&gt;Hodnoty veličín ukladáme do osobitných pamätí s koncovkou `h` (hodnota),  
+aby sme nezrušili veličiny ako symbolické premenné"><blockquote>
+<p>Hodnoty veličín ukladáme do osobitných pamätí s koncovkou <code>h</code> (hodnota),<br>aby sme nezrušili veličiny ako symbolické premenné</p>
+</blockquote>
+</div>
+    </div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623974-8" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="### B. Zákon šírenia neistôt (Model)" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623974-8" class="markdown-preview" style="display: block;" data-original-markdown="### B. Zákon šírenia neistôt (Model)"><h3 id="b-zákon-šírenia-neistôt-model">B. Zákon šírenia neistôt (Model)</h3>
+</div>
+    </div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># rozptyly od priamo meranych velicin
+vars = [ (diff(F,x)*ux)^2 for x,ux in vel ]
+show(vars)
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># celkovy rozptyl nepriamej veliciny - zakon sirenia neistot
+uF2 = sum(vars)
+show(uF2)
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># neistota nepriamej veliciny - odmocnina z rozptylu
+uF = sqrt(uF2)
+show(uF)
+</script></div></div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623976-9" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="### C. Dosadenie nameraných hodnôt (Aplikácia)" style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623976-9" class="markdown-preview" style="display: block;" data-original-markdown="### C. Dosadenie nameraných hodnôt (Aplikácia)"><h3 id="c-dosadenie-nameraných-hodnôt-aplikácia">C. Dosadenie nameraných hodnôt (Aplikácia)</h3>
+</div>
+    </div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># hodnoty, ktore sa budu dosadzovat
+hod = [m == mh, um == umh , g == gh, ug == ugh, a == ah, ua == uah]
+hod
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># dosadenie do sily F a jej neistoty
+Fh, uFh = F.subs(hod), uF.subs(hod)
+Fh, uFh
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># vypocet relativnej neistoty F v %
+dFh = (uFh/Fh)*100
+dFh
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># hodnoty rozptylov od priamych velicin
+varsh = sv(vars).subs(hod)
+show(varsh)
+</script></div></div><div class="nb-cell nb-code-cell"><div class="compute" style="display: none;"><script type="text/x-sage"># percentualne vyjadrenie rozptylov
+show(varsh/uFh^2*100)
+</script></div></div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623979-10" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="&gt; Tieto veličiny sa nazývajú rozptyly veličiny $F$ spôsobené priamymi veličinami.  
+Prvý člen je spôsobený hmotnosťou $m$, druhý od $g$ a tretí od uhla $\alpha$.  
+Ich súčet je celkový rozptyl hodnôt $F$, alebo skrátene len rozptyl $F$,  
+&gt; čo je iný názov pre druhú mocninu neistoty $u_F^2$." style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623979-10" class="markdown-preview" style="display: block;" data-original-markdown="&gt; Tieto veličiny sa nazývajú rozptyly veličiny $F$ spôsobené priamymi veličinami.  
+Prvý člen je spôsobený hmotnosťou $m$, druhý od $g$ a tretí od uhla $\alpha$.  
+Ich súčet je celkový rozptyl hodnôt $F$, alebo skrátene len rozptyl $F$,  
+&gt; čo je iný názov pre druhú mocninu neistoty $u_F^2$."><blockquote>
+<p>Tieto veličiny sa nazývajú rozptyly veličiny $F$ spôsobené priamymi veličinami.<br>Prvý člen je spôsobený hmotnosťou $m$, druhý od $g$ a tretí od uhla $\alpha$.<br>Ich súčet je celkový rozptyl hodnôt $F$, alebo skrátene len rozptyl $F$,<br>čo je iný názov pre druhú mocninu neistoty $u_F^2$.</p>
+</blockquote>
+</div>
+    </div><div class="nb-cell nb-markdown-cell">
+        <div class="editor-container">
+            <textarea id="md-editor-1795764623979-11" placeholder="Enter your Markdown or HTML here" class="markdown-textarea" data-original="### Záver (Verifikácia)
+
+**Najlepší odhad a neistota sily $F$**
+
+ $\boldsymbol{F = \bar{F}\pm u_{\bar{F}} = (0.76844 \pm 0.00033)}\text{N}$, pričom sme dosiahli 0.043% presnosť merania, čo je veľmi presné meranie. 
+ 
+*Verifikácia.* Tlaková sila by mala byť zhruba ako gravitačná sila, ktorá ju vyvolala, ale súčasne vždy menšia (nanajvyš rovná). Takže musí platiť $F\leqq F_g = mg=0.1 \times 10 = 1 \text{ N}$. Preto náš výsledok je v súlade s týmto poznatkom a jednoduchým odhadom. 
+
+**Vplyv priamo meraných veličín na meranie sily $F$**  
+
+*Zhodnotenie.* Z rozptylov vyjadrených v %, vidíme, že 77% do neistoty sily $F$ prispieva uhol $\alpha$, potom 22% konštanta $g$ a menej ako 1%  hmotnosť. Inými slovami, vidíme, že najviac do výslednej neistoty sily $F$ prispieva práve uhol a jeho neistota, potom je to gravitačné zrýchlenie a najmenej hmotnosť.
+
+*Odporúčanie.* Ak by sme chceli spresniť meranie sily, tak sa treba sústrediť na spresnenie merania uhla a to buď lepším prístrojom alebo lepšou metodikou merania uhla. Ďalšie zlepšenie by sme dosiahli kvalitnejším meraním $g$. Kým nezlepšíme kvalitu merania uhla $\alpha$ a $g$, tak meranie hmotnosti nie je potrebné meniť, pretože to prispieva zanedbateľným spôsobom." style="display: none;"></textarea>
+        </div>
+        <div id="preview-1795764623979-11" class="markdown-preview" style="display: block;" data-original-markdown="### Záver (Verifikácia)
+
+**Najlepší odhad a neistota sily $F$**
+
+ $\boldsymbol{F = \bar{F}\pm u_{\bar{F}} = (0.76844 \pm 0.00033)}\text{N}$, pričom sme dosiahli 0.043% presnosť merania, čo je veľmi presné meranie. 
+ 
+*Verifikácia.* Tlaková sila by mala byť zhruba ako gravitačná sila, ktorá ju vyvolala, ale súčasne vždy menšia (nanajvyš rovná). Takže musí platiť $F\leqq F_g = mg=0.1 \times 10 = 1 \text{ N}$. Preto náš výsledok je v súlade s týmto poznatkom a jednoduchým odhadom. 
+
+**Vplyv priamo meraných veličín na meranie sily $F$**  
+
+*Zhodnotenie.* Z rozptylov vyjadrených v %, vidíme, že 77% do neistoty sily $F$ prispieva uhol $\alpha$, potom 22% konštanta $g$ a menej ako 1%  hmotnosť. Inými slovami, vidíme, že najviac do výslednej neistoty sily $F$ prispieva práve uhol a jeho neistota, potom je to gravitačné zrýchlenie a najmenej hmotnosť.
+
+*Odporúčanie.* Ak by sme chceli spresniť meranie sily, tak sa treba sústrediť na spresnenie merania uhla a to buď lepším prístrojom alebo lepšou metodikou merania uhla. Ďalšie zlepšenie by sme dosiahli kvalitnejším meraním $g$. Kým nezlepšíme kvalitu merania uhla $\alpha$ a $g$, tak meranie hmotnosti nie je potrebné meniť, pretože to prispieva zanedbateľným spôsobom."><h3 id="záver-verifikácia">Záver (Verifikácia)</h3>
+<p><strong>Najlepší odhad a neistota sily $F$</strong></p>
+<p> $\boldsymbol{F = \bar{F}\pm u_{\bar{F}} = (0.76844 \pm 0.00033)}\text{N}$, pričom sme dosiahli 0.043% presnosť merania, čo je veľmi presné meranie. </p>
+<p><em>Verifikácia.</em> Tlaková sila by mala byť zhruba ako gravitačná sila, ktorá ju vyvolala, ale súčasne vždy menšia (nanajvyš rovná). Takže musí platiť $F\leqq F_g = mg=0.1 \times 10 = 1 \text{ N}$. Preto náš výsledok je v súlade s týmto poznatkom a jednoduchým odhadom. </p>
+<p><strong>Vplyv priamo meraných veličín na meranie sily $F$</strong>  </p>
+<p><em>Zhodnotenie.</em> Z rozptylov vyjadrených v %, vidíme, že 77% do neistoty sily $F$ prispieva uhol $\alpha$, potom 22% konštanta $g$ a menej ako 1%  hmotnosť. Inými slovami, vidíme, že najviac do výslednej neistoty sily $F$ prispieva práve uhol a jeho neistota, potom je to gravitačné zrýchlenie a najmenej hmotnosť.</p>
+<p><em>Odporúčanie.</em> Ak by sme chceli spresniť meranie sily, tak sa treba sústrediť na spresnenie merania uhla a to buď lepším prístrojom alebo lepšou metodikou merania uhla. Ďalšie zlepšenie by sme dosiahli kvalitnejším meraním $g$. Kým nezlepšíme kvalitu merania uhla $\alpha$ a $g$, tak meranie hmotnosti nie je potrebné meniť, pretože to prispieva zanedbateľným spôsobom.</p>
+</div>
+    </div></div></div></div>
+            
+        </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/embedded_sagecell_backup.js"></script>
+<script src="https://sage-sk.org/embedded_sagecell.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/vendor/js/FileSaver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/nbplayerConfig.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/markdown/markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/comment/comment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/markdown-fold.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.css">
+<script>let RUN_DELAY = 1000;</script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/customthemes15.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbrunner21.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbaiengine21.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbaipriming13.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main/js/nbautocompletion20.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://code.datagridxl.com/datagridxl2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fflate@0.8.3/umd/index.min.js"></script>
+<script>
+  playerConfig={"panes":"Exec","lang":"sage","linked":true,"eval":false,"hide":["fullScreen"],"execute":true,"showRead":false,"collapsable":false,"playerPath":"https://cdn.jsdelivr.net/gh/JupyterPER/SageMathAINotebooks@main","name":"SageMath"};
+  playerMode={"showSage":true,"showNotebookInput":true,"showSageInput":true};
+  let API_KEY="";
+  let API_URL="";
+  let CURRENT_MODEL="";
+  let CURRENT_LANGUAGE="";
+  let SAGECELL_URL="https://sage-sk.org/";
+  let toggleEvalBtnsState=false;
+  let isFullWidthState=false;
+  window.hideCodeInputState=false;
+  let PRELOAD="";
+  let SETTINGS_PATH_NAME="settings.js";
+  makeMenu();
+  localize();
+  createTableOfContents();
+  loadStatus();
+  restoreUIState();
+  makeSageCells(playerConfig);
+  launchPlayer();
+  addControlPanel();
+  setupRunAllCells();
+  addSageCellNumbering();
+  enhanceSageCellsWithGlobalAutocomplete();
+  window.onload = initializeMarkdownCells;
+  let CUSTOM_CONTEXT="";
+  let CUSTOM_CSS="";
+  if (CUSTOM_CSS) applyCustomCSS(CUSTOM_CSS);
+  addCommentShortcutToAllSageCells();
+  applyPreloadCells();
+  setupBulkCellObserver();
+</script>
+<script src="settings.js"></script>
+</body>
+</html>
